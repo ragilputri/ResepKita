@@ -16,3 +16,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('admin.index');
 });
+Route::get('login', 'LoginController@index');
+Route::post('auth-login', 'LoginController@store');
+Route::get('registrasi', 'RegisterController@index');
+Route::post('auth-register', 'RegisterController@store');
