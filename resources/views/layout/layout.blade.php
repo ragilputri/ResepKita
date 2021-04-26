@@ -104,8 +104,8 @@
                                 <span class="d-block d-md-none"><i class="fa fa-plus"></i></span>
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <li><a class="dropdown-item" href="#">Action</a></li>
-                                <li><a class="dropdown-item" href="#">Another action</a></li>
+                                <li><a class="dropdown-item" href="{{url('admin/kategori/create')}}">Create Kategori New</a></li>
+                                <li><a class="dropdown-item" href="{{url('admin/resep/create')}}">Create Resep New</a></li>
                                 <li><hr class="dropdown-divider"></li>
                                 <li><a class="dropdown-item" href="#">Something else here</a></li>
                             </ul>
@@ -254,82 +254,25 @@
                                 href="/" aria-expanded="false"><i class="mdi mdi-view-dashboard"></i><span
                                     class="hide-menu">Dashboard</span></a></li>
                         <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link"
-                                href="#l" aria-expanded="false"><i class="mdi mdi-chart-bar"></i><span
-                                    class="hide-menu">Charts</span></a></li>
-                        <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link"
-                                href="#" aria-expanded="false"><i class="mdi mdi-chart-bubble"></i><span
-                                    class="hide-menu">Widgets</span></a></li>
-                        <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link"
-                                href="#" aria-expanded="false"><i class="mdi mdi-border-inside"></i><span
-                                    class="hide-menu">Tables</span></a></li>
-                        <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link"
-                                href="#" aria-expanded="false"><i class="mdi mdi-blur-linear"></i><span
-                                    class="hide-menu">Full Width</span></a></li>
+                                href="{{url('admin/resep')}}" aria-expanded="false"><i class="mdi mdi-receipt"></i><span
+                                    class="hide-menu">Resep</span></a></li>
                         <li class="sidebar-item"> <a class="sidebar-link has-arrow waves-effect waves-dark"
-                                href="#" aria-expanded="false"><i class="mdi mdi-receipt"></i><span
-                                    class="hide-menu">Forms </span></a>
+                                href="javascript:void(0)" aria-expanded="false"><i class="mdi mdi-tag-multiple"></i><span
+                                    class="hide-menu">Kategori </span></a>
                             <ul aria-expanded="false" class="collapse  first-level">
-                                <li class="sidebar-item"><a href="#" class="sidebar-link"><i
-                                            class="mdi mdi-note-outline"></i><span class="hide-menu"> Form Basic
-                                        </span></a></li>
-                                <li class="sidebar-item"><a href="#" class="sidebar-link"><i
-                                            class="mdi mdi-note-plus"></i><span class="hide-menu"> Form Wizard
-                                        </span></a></li>
+                                <li class="sidebar-item"><a href="{{url ('admin/kategori/galeri') }}" class="sidebar-link"><i
+                                        class="mdi mdi-multiplication-box"></i><span class="hide-menu"> Galeri Kategori
+                                    </span></a></li>
+                                <li class="sidebar-item"><a href="{{url('admin/kategori')}}" class="sidebar-link"><i
+                                        class="mdi mdi-blur-linear"></i><span class="hide-menu"> Semua Kategori
+                                    </span></a></li>
                             </ul>
                         </li>
                         <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link"
-                                href="#" aria-expanded="false"><i
-                                    class="mdi mdi-relative-scale"></i><span class="hide-menu">Buttons</span></a></li>
-                        <li class="sidebar-item"> <a class="sidebar-link has-arrow waves-effect waves-dark"
-                                href="#" aria-expanded="false"><i class="mdi mdi-face"></i><span
-                                    class="hide-menu">Icons </span></a>
-                            <ul aria-expanded="false" class="collapse  first-level">
-                                <li class="sidebar-item"><a href="#" class="sidebar-link"><i
-                                            class="mdi mdi-emoticon"></i><span class="hide-menu"> Material Icons
-                                        </span></a></li>
-                                <li class="sidebar-item"><a href="#" class="sidebar-link"><i
-                                            class="mdi mdi-emoticon-cool"></i><span class="hide-menu"> Font Awesome
-                                            Icons </span></a></li>
-                            </ul>
-                        </li>
-                        <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link"
-                                href="#" aria-expanded="false"><i class="mdi mdi-pencil"></i><span
-                                    class="hide-menu">Elements</span></a></li>
-                        <li class="sidebar-item"> <a class="sidebar-link has-arrow waves-effect waves-dark"
-                                href="#" aria-expanded="false"><i
-                                    class="mdi mdi-move-resize-variant"></i><span class="hide-menu">Addons </span></a>
-                            <ul aria-expanded="false" class="collapse  first-level">
-                                <li class="sidebar-item"><a href="#" class="sidebar-link"><i
-                                            class="mdi mdi-view-dashboard"></i><span class="hide-menu"> Dashboard-2
-                                        </span></a></li>
-                                <li class="sidebar-item"><a href="#" class="sidebar-link"><i
-                                            class="mdi mdi-multiplication-box"></i><span class="hide-menu"> Gallery
-                                        </span></a></li>
-                                <li class="sidebar-item"><a href="#" class="sidebar-link"><i
-                                            class="mdi mdi-calendar-check"></i><span class="hide-menu"> Calendar
-                                        </span></a></li>
-                                <li class="sidebar-item"><a href="#" class="sidebar-link"><i
-                                            class="mdi mdi-bulletin-board"></i><span class="hide-menu"> Invoice
-                                        </span></a></li>
-                                <li class="sidebar-item"><a href="#" class="sidebar-link"><i
-                                            class="mdi mdi-message-outline"></i><span class="hide-menu"> Chat Option
-                                        </span></a></li>
-                            </ul>
-                        </li>
-                        <li class="sidebar-item"> <a class="sidebar-link has-arrow waves-effect waves-dark"
-                                href="#" aria-expanded="false"><i class="mdi mdi-account-key"></i><span
-                                    class="hide-menu">Authentication </span></a>
-                            <ul aria-expanded="false" class="collapse  first-level">
-                                <li class="sidebar-item"><a href="#" class="sidebar-link"><i
-                                            class="mdi mdi-all-inclusive"></i><span class="hide-menu"> Login </span></a>
-                                </li>
-                                <li class="sidebar-item"><a href="#" class="sidebar-link"><i
-                                            class="mdi mdi-all-inclusive"></i><span class="hide-menu"> Register
-                                        </span></a></li>
-                            </ul>
-                        </li>
+                                href="#" aria-expanded="false"><i class="mdi mdi-account-multiple"></i><span
+                                    class="hide-menu">User</span></a></li>
                         <li class="sidebar-item p-3">
-                            <a href="https://github.com/wrappixel/matrix-admin-bt5" target="_blank" class="w-100 btn btn-cyan d-flex align-items-center text-white"><i class="mdi mdi-cloud-download font-20 me-2"></i>Download Free</a>
+                            <a href="/" target="_blank" class="w-100 btn btn-cyan d-flex align-items-center text-white"><i class="mdi mdi-logout"></i>&nbsp;LOGOUT</a>
                         </li>
                     </ul>
                 </nav>
@@ -354,8 +297,7 @@
                         <div class="ms-auto text-end">
                             <nav aria-label="breadcrumb">
                                 <ol class="breadcrumb">
-                                    <li class="breadcrumb-item"><a href="#">Home</a></li>
-                                    <li class="breadcrumb-item active" aria-current="page">Library</li>
+                                    @yield('breadcrumb')
                                 </ol>
                             </nav>
                         </div>
@@ -377,10 +319,6 @@
             <!-- ============================================================== -->
             <!-- footer -->
             <!-- ============================================================== -->
-            <footer class="footer text-center">
-                All Rights Reserved by Matrix-admin. Designed and Developed by <a
-                    href="https://www.wrappixel.com">WrapPixel</a>.
-            </footer>
             <!-- ============================================================== -->
             <!-- End footer -->
             <!-- ============================================================== -->
@@ -398,7 +336,7 @@
     <script src={{asset('libs/jquery/dist/jquery.min.js')}}></script>
     <!-- Bootstrap tether Core JavaScript -->
     <script src={{asset('libs/bootstrap/dist/js/bootstrap.bundle.min.js')}}></script>
-    <script src={{asset('assets/libs/perfect-scrollbar/dist/perfect-scrollbar.jquery.min.js')}}></script>
+    <script src={{asset('libs/perfect-scrollbar/dist/perfect-scrollbar.jquery.min.js')}}></script>
     <script src={{asset('extra-libs/sparkline/sparkline.js')}}></script>
     <!--Wave Effects -->
     <script src={{asset('js/waves.js')}}></script>
