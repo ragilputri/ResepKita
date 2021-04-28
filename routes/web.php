@@ -20,3 +20,11 @@ Route::get('login', 'LoginController@index');
 Route::post('auth-login', 'LoginController@store');
 Route::get('registrasi', 'RegisterController@index');
 Route::post('auth-register', 'RegisterController@store');
+
+Route::group(['middleware' => 'App\Http\Middleware\AdminMiddleware'], function () {
+
+});
+
+Route::group(['middleware' => 'App\Http\Middleware\UserMiddleware'], function () {
+
+});

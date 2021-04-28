@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\User;
+use Session;
 use App\Mail\EmailNotification;
 use Illuminate\Support\Facades\Mail;
 
@@ -43,18 +44,17 @@ class RegisterController extends Controller
         $this->validate($request, [
             'name' => 'required|min:3|max:50',
             'email' => 'email',
-            'password' => 'min:8',
-            'confirm_password' => 'required_with:password|same:password|min:8',
+            'password' => 'min:6',
+            'confirm_password' => 'required_with:password|same:password|min:6',
         ]);
 
-        $data_user = User::create([
+        User::create([
             'name' => $request->input('name'),
             'email' => $request->input('email'),
             'password' => $pass,
             'account_status' => 2,
             'photo' => "default-phofile.png",
         ]);
-        Mail::to($data_user->email)->send(new EmailNotification($data_user));
         Session::flash('sukses','Berhasil membuat akun. Login Kembali!');
         return redirect("/login");
     }
