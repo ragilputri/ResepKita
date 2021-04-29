@@ -4,9 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\User;
+use Session;
 use App\Mail\EmailNotification;
 use Illuminate\Support\Facades\Mail;
-use Session;
 
 class RegisterController extends Controller
 {
