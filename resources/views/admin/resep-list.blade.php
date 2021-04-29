@@ -68,7 +68,7 @@
                 <tbody id="myTable">
                 @foreach($data_resep as $row)
                     <tr>
-                        <td></td>
+                        <td>{{$row->name}}</td>
                         <td>{{$row->nama_resep}}</td>
                         <td>{{$row->slug}}</td>
                         <td>{{$row->nama_kategori}}</td>

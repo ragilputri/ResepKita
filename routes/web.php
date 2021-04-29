@@ -12,6 +12,10 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::get('login', 'LoginController@index');
+Route::post('auth-login', 'LoginController@store');
+Route::get('registrasi', 'RegisterController@index');
+Route::post('auth-register', 'RegisterController@store');
 
 Route::get('/', function () {
     return view('admin.index');
@@ -32,3 +36,6 @@ Route::post('admin/resep/save','ResepController@save');
 Route::get('admin/resep/edit/{id}','ResepController@edit');
 Route::post('admin/resep/update/{id}','ResepController@update');
 Route::get('admin/resep/delete/{id}','ResepController@delete');
+
+Route::get('admin/user-list','UserListController@list');
+

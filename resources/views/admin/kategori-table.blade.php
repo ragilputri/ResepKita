@@ -43,14 +43,23 @@
             <table class="table table-hover">
                 <thead>
                     <tr>
+                        <th>Penulis</th>
                         <th>Nama Resep</th>
                         <th>Gambar</th>
                         <th>Alat dan Bahan</th>
                         <th>Step</th>
-                        <th>Action</th>
                     </tr>
                 </thead>
                 <tbody id="myTable">
+                    @foreach($data_resep as $row)
+                    <tr>
+                        <td>{{$row->name}}</td>
+                        <td>{{$row->nama_resep}}</td>
+                        <td><img src="{{ asset('images/'.$row->gambar) }}" height="100" width="150"></td>
+                        <td>{!! nl2br($row->alat_bahan) !!}</td>
+                        <td>{!! nl2br($row->step) !!}</td>
+                    </tr>
+                    @endforeach
                 </tbody>
             </table>
         </div>

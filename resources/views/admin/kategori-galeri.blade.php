@@ -23,7 +23,12 @@
                                     href="{{ asset('images/'.$row->gambar_sampul) }}"><i
                                         class="mdi mdi-magnify-plus"></i></a></li>
                             <li class="el-item"><a class="btn default btn-outline el-link"
-                                    href="{{url ('admin/kategori/table/'.$row->id) }}"><i class="mdi mdi-file-document"></i> 20</a></li>
+                                    href="{{url ('admin/kategori/table/'.$row->id) }}"><i class="mdi mdi-file-document"></i>
+                                    @foreach($count as $c)
+                                    @if($c->kategori_id == $row->id)
+                                    {{$c->total}}
+                                    @endif
+                                    @endforeach</a></li>
                         </ul>
                     </div>
                 </div>

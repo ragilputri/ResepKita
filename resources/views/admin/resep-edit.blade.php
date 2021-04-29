@@ -38,11 +38,11 @@
                 </p>
                 <p>
                     <label>Alat dan Bahan</label><br>
-                    <textarea name="alat_bahan" class="form-control" placeholder="Alat dan bahan" rows="10">{!! nl2br($data_resep->alat_bahan) !!}</textarea>
+                    <textarea name="alat_bahan" class="form-control" placeholder="Alat dan bahan" rows="10">{{$data_resep->alat_bahan}}</textarea>
                 </p>
                 <p>
                     <label>Step</label><br>
-                    <textarea name="step" class="form-control" rows="12">{!! nl2br($data_resep->step) !!}</textarea>
+                    <textarea name="step" class="form-control" rows="12">{{$data_resep->step}}</textarea>
                 </p>
                 <p>
                     <input type="submit" name="tombol-add" value="Simpan" class="btn btn-primary">

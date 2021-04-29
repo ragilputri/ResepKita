@@ -14,7 +14,8 @@ class ResepController extends Controller
     public function list(){
         $data_resep = DB::table('resep')
         ->leftjoin('kategori','resep.kategori_id','=','kategori.id')
-        ->select('kategori.*','resep.*')
+        ->leftjoin('users','resep.user_id','=','users.id')
+        ->select('users.name','kategori.*','resep.*')
         ->paginate(5);
         return view('admin.resep-list')
         ->with('data_resep',$data_resep);
@@ -39,6 +40,7 @@ class ResepController extends Controller
             "step"=>$request->input("step"),
             "slug"=>$slug,
             "gambar"=>$imgName,
+            "user_id"=>'1',
         ]);
 
         if($data_resep){

@@ -53,21 +53,16 @@
                     <!-- ============================================================== -->
                     <a class="navbar-brand" href="index.html">
                         <!-- Logo icon -->
-                        <b class="logo-icon ps-2">
-                            <!--You can put here icon as well // <i class="wi wi-sunset"></i> //-->
-                            <!-- Dark Logo icon -->
-                            <img src={{asset('images/logo-icon.png')}} alt="homepage" class="light-logo" />
 
-                        </b>
                         <!--End Logo icon -->
                         <!-- Logo text -->
                         <span class="logo-text">
                             <!-- dark Logo text -->
-                            <img src={{asset('images/logo-text.png')}} alt="homepage" class="light-logo" />
+                            <img src={{asset('images/logo-kita.png')}} alt="homepage" class="light-logo" width="210"/>
 
                         </span>
                         <!-- Logo icon -->
-                        <!-- <b class="logo-icon"> -->
+                        <!-- <b class="logo-kita"> -->
                         <!--You can put here icon as well // <i class="wi wi-sunset"></i> //-->
                         <!-- Dark Logo icon -->
                         <!-- <img src="../../assets/images/logo-text.png" alt="homepage" class="light-logo" /> -->
@@ -269,7 +264,7 @@
                             </ul>
                         </li>
                         <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link"
-                                href="#" aria-expanded="false"><i class="mdi mdi-account-multiple"></i><span
+                                href="{{url('admin/user-list')}}" aria-expanded="false"><i class="mdi mdi-account-multiple"></i><span
                                     class="hide-menu">User</span></a></li>
                         <li class="sidebar-item p-3">
                             <a href="/" target="_blank" class="w-100 btn btn-cyan d-flex align-items-center text-white"><i class="mdi mdi-logout"></i>&nbsp;LOGOUT</a>

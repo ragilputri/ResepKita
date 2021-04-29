@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Kategori;
 use Illuminate\Support\Str;
+use Illuminate\Support\Facades\DB;
 use Session;
 
 class KategoriController extends Controller
@@ -95,14 +96,29 @@ class KategoriController extends Controller
     public function galeri(){
         $data_kategori = Kategori::all();
 
+        $count = DB::table('resep')
+        ->join('kategori','resep.kategori_id','=','kategori.id')
+        ->select('resep.kategori_id', DB::raw('COUNT(resep.id) as total'))
+        ->groupBy('resep.kategori_id','kategori.id')
+        ->get();
+
         return view('admin.kategori-galeri')
+                ->with('count',$count)
                 ->with('data_kategori',$data_kategori);
     }
 
     public function kat_table($id){
         $data_kategori = Kategori::find($id);
+        $data_resep = DB::table('resep')
+        ->join('kategori','resep.kategori_id','=','kategori.id')
+        ->leftjoin('users','resep.user_id','=','users.id')
+        ->where('resep.kategori_id','=',$id)
+        ->select('users.name','kategori.*','resep.*')
+        ->paginate(5);
 
         return view('admin.kategori-table')
+
+                ->with('data_resep',$data_resep)
                 ->with('data_kategori',$data_kategori);
     }
 }
